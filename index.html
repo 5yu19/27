@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 JUNE Retro Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Londrina+Solid:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="poster">
+        <div class="info-section">
+            <div class="header-section">
+                <div class="year">2026</div>
+                <div class="month">JUNE</div>
+            </div>
+            <button class="add-btn" onclick="openModal()">+일정 추가</button>
+        </div>
+        
+        <div class="calendar-container">
+            <div class="calendar-wrapper">
+            <div class="grid">
+                <div class="box day-header">s</div>
+                <div class="box day-header">m</div>
+                <div class="box day-header">t</div>
+                <div class="box day-header">w</div>
+                <div class="box day-header">t</div>
+                <div class="box day-header">f</div>
+                <div class="box day-header">s</div>
+
+                <div class="empty-star"></div>
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <div class="box">9</div>
+                <div class="box">10</div>
+                <div class="box">11</div>
+                <div class="box">12</div>
+                <div class="box">13</div>
+                <div class="box">14</div>
+                <div class="box">15</div>
+                <div class="box">16</div>
+                <div class="box">17</div>
+                <div class="box">18</div>
+                <div class="box">19</div>
+                <div class="box">20</div>
+                <div class="box">21</div>
+                <div class="box">22</div>
+                <div class="box">23</div>
+                <div class="box">24</div>
+                <div class="box">25</div>
+                <div class="box">26</div>
+                <div class="box">27</div>
+                <div class="box">28</div>
+                <div class="box">29</div>
+                <div class="box">30</div>
+                <div class="empty-star"></div>
+                <div class="empty-star"></div>
+                <div class="empty-star"></div>
+                <div class="empty-star"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 일정 추가 모달 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <h3>새 일정 추가</h3>
+            <input type="text" id="dateInput" placeholder="날짜 입력 (예: 2 또는 2-6)">
+            <input type="text" id="scheduleInput" placeholder="일정을 입력하세요">
+            
+            <div class="color-picker">
+                <button class="color-btn" style="background-color: #ffffff;" onclick="selectColor('#ffffff', this)"></button>
+                <button class="color-btn" style="background-color: #fdf2b3;" onclick="selectColor('#fdf2b3', this)"></button>
+                <button class="color-btn" style="background-color: #cbe6c6;" onclick="selectColor('#cbe6c6', this)"></button>
+                <button class="color-btn" style="background-color: #cce3eb;" onclick="selectColor('#cce3eb', this)"></button>
+                <button class="color-btn" style="background-color: #e2d1eb;" onclick="selectColor('#e2d1eb', this)"></button>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-save" onclick="saveSchedule()">저장</button>
+                <button class="btn-cancel" onclick="closeModal()">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 일정 수정/삭제 모달 -->
+    <div class="modal-overlay" id="editModalOverlay">
+        <div class="modal-content">
+            <h3>일정 관리</h3>
+            <input type="text" id="editScheduleInput" placeholder="일정을 수정하세요">
+            <div class="modal-buttons">
+                <button class="btn-save" onclick="updateSchedule()">수정</button>
+                <button class="btn-delete" onclick="deleteSchedule()">삭제</button>
+                <button class="btn-cancel" onclick="closeEditModal()">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 일정 크게 보기 모달 -->
+    <div class="modal-overlay" id="cellViewModalOverlay">
+        <div class="modal-content">
+            <h3 id="cellViewTitle">일정 보기</h3>
+            <div id="cellViewList"></div>
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="closeCellViewModal()">닫기</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
