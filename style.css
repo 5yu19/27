@@ -1,3 +1,11 @@
+html {
+    font-size: calc(100vw / 66);
+}
+
+@media (min-width: 1000px) {
+    html { font-size: 15px; } 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,16 +19,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 2rem;
 }
 
 .poster {
-    width: 100%;
-    max-width: 620px;
+    width: 62rem;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
     position: relative;
 }
 
@@ -46,16 +54,16 @@ body {
 
 .year {
     color: #a53332;
-    font-size: 3rem;
-    letter-spacing: 2px;
+    font-size: 4.8rem;
+    letter-spacing: 0.2rem;
     line-height: 1;
     margin-bottom: 0;
 }
 
 .month {
     color: #a53332;
-    font-size: 8rem;
-    letter-spacing: -2px;
+    font-size: 12.8rem;
+    letter-spacing: -0.2rem;
     line-height: 0.8;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -65,14 +73,14 @@ body {
     background-color: #bd2a2e;
     color: #f9a8b6;
     display: inline-block;
-    padding: 4px 15px;
-    font-size: 0.9rem;
+    padding: 0.4rem 1.5rem;
+    font-size: 1.4rem;
     transform: rotate(-2deg);
-    margin-left: 50px;
+    margin-left: 5rem;
 }
 
 .calendar-wrapper {
-    padding: 30px 30px 15px 30px;
+    padding: 3rem 3rem 1.5rem 3rem;
     position: relative;
     z-index: 1;
 }
@@ -80,10 +88,10 @@ body {
 .calendar-wrapper::before {
     content: '';
     position: absolute;
-    top: 55px;
-    bottom: -10px;
-    left: -30px;
-    right: -50px;
+    top: 5.5rem;
+    bottom: -1rem;
+    left: -3rem;
+    right: -5rem;
     background-color: #eebabe;
     z-index: -1;
 }
@@ -91,7 +99,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    gap: 0.5rem;
 }
 
 .box {
@@ -102,8 +110,8 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0;
-    font-size: 2rem;
+    padding: 1rem 0;
+    font-size: 3.2rem;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -121,9 +129,9 @@ body {
 .day-header {
     background-color: #ca494d;
     aspect-ratio: 1 / 0.8;
-    font-size: 2.5rem;
+    font-size: 4rem;
     text-transform: lowercase;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     justify-content: center;
     padding: 0;
 }
@@ -144,14 +152,14 @@ body {
 .add-btn {
     background-color: #ca494d;
     color: #f1efe2;
-    font-size: 1.1rem;
-    padding: 10px 25px;
+    font-size: 1.8rem;
+    padding: 1rem 2.5rem;
     border: none;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     cursor: pointer;
     transform: rotate(4deg);
     transition: transform 0.2s ease, background-color 0.2s;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .add-btn:hover {
@@ -172,18 +180,18 @@ body {
 }
 
 .schedule-item {
-    font-size: 0.85rem;
+    font-size: 1.4rem;
     background-color: #eebabe;
     color: #a53332;
-    margin-top: 5px;
-    padding: 2px 6px;
-    border-radius: 4px;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
     width: 90%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    border: 2px solid #a53332;
+    border: 0.2rem solid #a53332;
     flex-shrink: 0;
     cursor: pointer;
     transition: transform 0.1s, opacity 0.1s;
@@ -206,28 +214,28 @@ body {
 
 .modal-content {
     background-color: #eebabe;
-    padding: 35px;
-    width: 400px;
-    border: 4px solid #a53332;
-    border-radius: 15px;
+    padding: 3.5rem;
+    width: 40rem;
+    border: 0.4rem solid #a53332;
+    border-radius: 1.5rem;
     text-align: center;
-    box-shadow: 6px 6px 0px rgba(165, 51, 50, 0.4);
+    box-shadow: 0.6rem 0.6rem 0px rgba(165, 51, 50, 0.4);
 }
 
 .modal-content h3 {
     color: #a53332;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
+    font-size: 3.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.1rem;
 }
 
 .modal-content input {
     width: 100%;
-    padding: 15px;
-    font-size: 1.2rem;
-    border: 2px solid #a53332;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 1.5rem;
+    font-size: 1.9rem;
+    border: 0.2rem solid #a53332;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
     outline: none;
     color: #a53332;
     font-family: 'Londrina Solid', 'Do Hyeon', sans-serif; 
@@ -237,14 +245,14 @@ body {
 .modal-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .modal-buttons button {
-    padding: 12px 24px;
-    font-size: 1.3rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 2.1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     cursor: pointer;
     transition: transform 0.1s;
 }
@@ -257,15 +265,15 @@ body {
 .color-picker {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .color-btn {
-    width: 35px;
-    height: 35px;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 0.2rem solid transparent;
     cursor: pointer;
     transition: transform 0.2s, border-color 0.2s;
 }
@@ -275,26 +283,26 @@ body {
 }
 
 .color-btn.selected {
-    border: 3px solid #a53332;
+    border: 0.3rem solid #a53332;
     transform: scale(1.2);
 }
 
 #cellViewList {
-    max-height: 200px;
+    max-height: 20rem;
     overflow-y: auto;
-    margin-bottom: 20px;
-    padding: 0 5px;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
     scrollbar-width: thin;
 }
 
 .cell-view-item {
     background-color: #f1efe2;
     color: #a53332;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-    border: 2px solid #a53332;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.9rem;
+    border: 0.2rem solid #a53332;
     text-align: left;
     word-break: break-word;
 }
