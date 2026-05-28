@@ -1,9 +1,9 @@
 html {
-    font-size: calc(100vw / 66);
+    font-size: calc(100vw / 85);
 }
 
 @media (min-width: 1000px) {
-    html { font-size: 15px; } 
+    html { font-size: 12px; } 
 }
 
 * {
